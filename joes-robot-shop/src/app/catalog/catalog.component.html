@@ -1,16 +1,7 @@
-<div class="container">
-  <div class="filters">
-    <a class="button">Heads</a>
-    <a class="button">Arms</a>
-    <a class="button">Torsos</a>
-    <a class="button">Bases</a>
-    <a class="button">All</a>
-  </div>
 
-  <ul class="products">
-    <!--Usamos ngFor para que se repita en toda la matriz, lo uso para recorrer cada elemento de una matriz-->
+    <!--Usamos ngFor para que se repita en toda la matriz, lo uso para recorrer cada elemento de una matriz
     <li class="product-item" *ngFor="let product of getFilteredProducts()">
-      <div class="product">
+      <div class="product">-->
         <!--Mostramos la informacion objecto
         <div class="product-details">
             Agregamos la expresión de interpolación
@@ -34,7 +25,7 @@
           <button class="cta">Buy</button>
         </div>-->
 
-        <!--Ahora para una matriz voy a usar las directivas que son como atributos, hay un puñado de directivas integradas, pero incluyen cosas como ngClass, ngIf y ngFor-->
+        <!--Ahora para una matriz voy a usar las directivas que son como atributos, hay un puñado de directivas integradas, pero incluyen cosas como ngClass, ngIf y ngFor
         
         
         <div class="product-details">
@@ -57,6 +48,38 @@
       </div>
       
 
+    </li>
+  </ul>
+</div>-->
+<div class="container">
+  <div class="filters">
+    <a class="button " (click)="filter='Heads'">Heads</a>
+    <a class="button" (click)="filter='Arms'">Arms</a>
+    <a class="button" (click)="filter='Torsos'">Torsos</a>
+    <a class="button" (click)="filter='Bases'">Bases</a>
+    <a class="button" (click)="filter=''">All</a>
+  </div>
+
+  <ul class="products">
+    <li class="product-item" *ngFor="let product of getFilteredProducts()">
+      <div class="product"  >
+        <div class="product-details">
+          <img [src]="getImageUrl(product)" [alt]="product?.name" />
+          
+          <div class="product-info">
+            <div class="name ">{{ product?.name}} </div>
+            <div class="description">{{ product?.description}}</div>
+            <div class="category">Part Type: {{ product?.category}}</div>
+          </div>
+        </div>
+        <div class="price">
+            
+          <div style="font-weight: bold;"
+          [style]="{'color': product.discount > 0 ? 'green' : ''}" [ngClass]="getDiscountedClasses(product)" >{{ product.price | currency: 'USD'}}</div>  
+          <div *ngIf="product.discount > 0" class="discount">${{ (product.price * (1-product.discount)) |currency: 'USD'}}</div>
+          <button class="cta">Buy</button>
+        </div>
+      </div>
     </li>
   </ul>
 </div>

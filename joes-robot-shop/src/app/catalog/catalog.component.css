@@ -1,3 +1,14 @@
+a {
+    font-weight: bold;
+}
+.strikethrougt {
+    text-decoration: line-through;
+    font-size: 18px;
+}
+.bold {
+    font-weight: bold;
+}
+
 .container {
   display: flex;
   flex-direction: column;
