@@ -8,30 +8,55 @@
   </div>
 
   <ul class="products">
-    <li class="product-item">
+    <!--Usamos ngFor para que se repita en toda la matriz, lo uso para recorrer cada elemento de una matriz-->
+    <li class="product-item" *ngFor="let product of getFilteredProducts()">
       <div class="product">
-        <!--Mostramos la informacion-->
+        <!--Mostramos la informacion objecto
         <div class="product-details">
-            <!--Agregamos la expresión de interpolación
+            Agregamos la expresión de interpolación
           <img src="{{'/assets/images/robot-parts'}}" alt="" />-->
           <!--Interpolacion con atributo
             <img [src]="'/assets/images/robot-parts' + product.imageName" [alt]="product.name" />
         -->
         <!--Convinar el atributo con funcion, tambien se pueden pasar parametros a esta funcion-->
+        <!--Esto es para un metodo de objecto
           <img [src]="getImageUrl(product)" [alt]="product.name" />
           <div class="product-info">
-            <!--Añadimos una expresion de interpolación y asi podemos acceder directamente a las propiedades en nuestro componente catalogo -->
+            Añadimos una expresion de interpolación y asi podemos acceder directamente a las propiedades en nuestro componente catalogo 
             <div class="name">{{product.name}}</div>
             <div class="description">{{product.description}}</div>
             <div class="category">Part Type: {{product.category}}</div>
           </div>
+        </div>-->
+        <!--Intruzco el dolar delante para que se vea bien y le añado el toFixed para darle los decimales que quiero
+        <div class="price">${{product.price.toFixed(2)}}
+          <div></div>
+          <button class="cta">Buy</button>
+        </div>-->
+
+        <!--Ahora para una matriz voy a usar las directivas que son como atributos, hay un puñado de directivas integradas, pero incluyen cosas como ngClass, ngIf y ngFor-->
+        
+        
+        <div class="product-details">
+            <img [src]="'/assets/images/robot-parts' + product.imageName" [alt]="product.name" />
+       
+        
+          <img [src]="getImageUrl(product)" [alt]="product?.name" />
+          <div class="product-info">
+            
+            <div class="name">{{product?.name}}</div>
+            <div class="description">{{product.description}}</div>
+            <div class="category">Part Type: {{product?.category}}</div>
+          </div>
         </div>
-        <!--Intruzco el dolar delante para que se vea bien y le añado el toFixed para darle los decimales que quiero-->
+        
         <div class="price">${{product.price.toFixed(2)}}
           <div></div>
           <button class="cta">Buy</button>
         </div>
       </div>
+      
+
     </li>
   </ul>
 </div>
