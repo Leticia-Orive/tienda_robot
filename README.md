@@ -21,3 +21,6 @@
     Por lo general, solo hay tres caracteres mas o menos y asegurase de no usar el comando ng porque esta reservado por angular. 
 7. Configurar angular.json para las imagenes 
     En angular.json puedes ver dentro de assets una sección de activos. Puedes ver que nuestra carpeta de activos se ha agregado a la matriz de activos.
+8. Interpolación
+Es el proceso de poner expresiones en nuestro HTML que Angular luego evaluará y convertirá .
+    Si poner esto <h1>2+2= {{Math.round(2+2)}}</h1> te salta un error y es porque el analizador angular no puede manejar esta expresión limita intencinalmente lo que puede hacer en las exprersiones de interpolación para evitar que coloquemos mucho codigo JS en nuestro HTML.
