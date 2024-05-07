@@ -10,4 +10,5 @@ Creacion de una nueva Aplicacion de Angular
 ng new (nombre del proyecto como le queramos llamar)
     La primera pregunta que nos hace es queremos añadir enrutamientos a nuestro proyecto. En la mayoria de las aplicaciones, es probable que se desee icluir el enrutamiento, pero yo le he dicho que no esto para que vea como se agrega.
  luego css
-   
+Arrancar la app para que se pueda ver
+npm start a la pregunta he marcado que no
