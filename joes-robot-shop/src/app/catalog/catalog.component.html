@@ -12,8 +12,13 @@
       <div class="product">
         <!--Mostramos la informacion-->
         <div class="product-details">
-            <!--Agregamos la expresión de interpolación-->
-          <img src="{{'/assets/images/robot-parts'}}" alt="" />
+            <!--Agregamos la expresión de interpolación
+          <img src="{{'/assets/images/robot-parts'}}" alt="" />-->
+          <!--Interpolacion con atributo
+            <img [src]="'/assets/images/robot-parts' + product.imageName" [alt]="product.name" />
+        -->
+        <!--Convinar el atributo con funcion, tambien se pueden pasar parametros a esta funcion-->
+          <img [src]="getImageUrl(product)" [alt]="product.name" />
           <div class="product-info">
             <!--Añadimos una expresion de interpolación y asi podemos acceder directamente a las propiedades en nuestro componente catalogo -->
             <div class="name">{{product.name}}</div>
