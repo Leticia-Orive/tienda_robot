@@ -15,3 +15,5 @@
 5.Creamos nuestro primer componente
     ng generate component home
     Si por un casual la carpeta la queremos dentro de otra carpeta seria  ng generate component my-folder/home
+6.Definicion del prefijo de aplicación para los componentes
+    Dentro de un archivo .ts lo que va en el selector antes de lal componente home en este caso app se llama prefijo, que debe ser unico para esta aplicación.Esto evita colisones con otros nombres de componentes en de que importe y usar componentes de terceros en otras bibliotecas o incluso si está importando.
