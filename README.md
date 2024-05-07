@@ -6,4 +6,8 @@ Comando para usar la version de node instalada
 nvm use 18.10.0
 Instalamos angular la version 16.0.0
 npm install -g @angular/cli@16.0.0
+Creacion de una nueva Aplicacion de Angular
+ng new (nombre del proyecto como le queramos llamar)
+    La primera pregunta que nos hace es queremos añadir enrutamientos a nuestro proyecto. En la mayoria de las aplicaciones, es probable que se desee icluir el enrutamiento, pero yo le he dicho que no esto para que vea como se agrega.
+ luego css
    
