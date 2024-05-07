@@ -12,3 +12,6 @@ ng new (nombre del proyecto como le queramos llamar)
  luego css
 Arrancar la app para que se pueda ver
 npm start a la pregunta he marcado que no
+Creamos nuestro primer componente
+ng generate component home
+Si por un casual la carpeta la queremos dentro de otra carpeta seria  ng generate component my-folder/home
