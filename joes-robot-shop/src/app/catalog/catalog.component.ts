@@ -15,11 +15,10 @@ export class CatalogComponent {
   products: IProduct[];*/
   products: any;
   filter: string = '';
-  /**Ahora voy a crear como una variable */
-  private carSvc: CartService =inject(CartService);
+  
 
   /**Creacción del constructor para la clase */
-  constructor() {
+  constructor(private carSvc: CartService) {
     /*Iniciar la propiedad del nuevo producto y lo configure en un nuevo objeto que se vea asi
     this.products = {
       id: 2,
@@ -233,5 +232,8 @@ export class CatalogComponent {
    * addToCart(product: IProduct) {
     this.carSvc.add(product);
   }
-   */
+  /**Ahora voy a crear como una variable 
+  private carSvc: CartService =inject(CartService);
+  constructor vacio*/
+  
 }
