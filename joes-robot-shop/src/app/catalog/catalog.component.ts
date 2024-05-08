@@ -206,11 +206,11 @@ export class CatalogComponent {
       },
     ];
   }
-  /**Agrego la funcion, incluyo el parametro del producto que es de tipo IProduct y luego devuelvo la expresión de la url adjunta*/
+  /**Agrego la funcion, incluyo el parametro del producto que es de tipo IProduct y luego devuelvo la expresión de la url adjunta
   getImageUrl(product: IProduct) {
     if (!product) return '';
     return '/assets/images/robot-parts/' + product.imageName;
-  }
+  }*/
   getDiscountedClasses(product: IProduct) {
     if (product.discount > 0) return ['strikethrogh bold'];
     else return [];
