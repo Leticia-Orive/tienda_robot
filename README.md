@@ -24,3 +24,5 @@
 8. Interpolación
 Es el proceso de poner expresiones en nuestro HTML que Angular luego evaluará y convertirá .
     Si poner esto <h1>2+2= {{Math.round(2+2)}}</h1> te salta un error y es porque el analizador angular no puede manejar esta expresión limita intencinalmente lo que puede hacer en las exprersiones de interpolación para evitar que coloquemos mucho codigo JS en nuestro HTML.
+9. Agregar un servicio
+    ng g s (nombre del servicio)

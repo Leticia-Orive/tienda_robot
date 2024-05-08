@@ -14,7 +14,7 @@ export class CatalogComponent {
   products: IProduct[];*/
   products: any;
   filter: string = '';
-  cart: IProduct[] = [];
+  
 
   /**Creacción del constructor para la clase */
   constructor() {
@@ -223,8 +223,6 @@ export class CatalogComponent {
         );
   }
   /**Carrito */
-  addToCart(product: IProduct){
-    this.cart.push(product);
-    console.log(`product ${product.name} added to cart`)
-  }
+  addToCart(product: IProduct){}
+    
 }
