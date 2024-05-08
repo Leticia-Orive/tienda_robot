@@ -64,7 +64,7 @@
     <li class="product-item" *ngFor="let Product of getFilteredProducts()">
       <!--Aqui vamos a recibir algun dato sobre el hijo
       Voy a usar una sintaxis de corchete que lo hemos visto abtes para las fijaciones-->
-        <bot-product-details [product]="Product"></bot-product-details>
+        <bot-product-details [product]="Product" (buy)="addToCart(Product)"></bot-product-details>
         
       
     </li>
