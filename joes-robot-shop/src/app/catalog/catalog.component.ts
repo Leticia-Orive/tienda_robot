@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { IProduct } from './product.model';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'bot-catalog',
@@ -14,7 +15,8 @@ export class CatalogComponent {
   products: IProduct[];*/
   products: any;
   filter: string = '';
-  
+  /**Ahora voy a crear como una variable */
+  private carSvc: CartService =inject(CartService);
 
   /**Creacción del constructor para la clase */
   constructor() {
@@ -223,6 +225,13 @@ export class CatalogComponent {
         );
   }
   /**Carrito */
-  addToCart(product: IProduct){}
-    
+  addToCart(product: IProduct) {
+    this.carSvc.add(product);
+  }
+  /** esta es una opcion de ponerlo
+   * constructor(private carSvc: CartService)
+   * addToCart(product: IProduct) {
+    this.carSvc.add(product);
+  }
+   */
 }
